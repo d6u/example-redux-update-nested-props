@@ -10,7 +10,7 @@ const config = {
   },
 
   output: {
-    filename: join(__dirname, './bundles/[name].js'),
+    filename: join(__dirname, './dist/[name].js'),
   },
 
   module: {
