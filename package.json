@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --bail && cp one-connect/index.html dist/one-connect.html && cp repo-connect/index.html dist/repo-connect.html && cp repo-connect-memorize/index.html dist/repo-connect-memorize.html && cp reducer-side-effect/index.html dist/reducer-side-effect.html && cp style.css dist/style.css",
+    "deploy": "npm run build && ./deploy.sh"
   },
   "keywords": [],
   "author": "Daiwei Lu <daiweilu123@gmail.com> (http://daiwei.lu/)",
@@ -18,11 +19,10 @@
     "lodash": "^4.12.0",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
+    "react-observable-subscribe": "^0.1.6",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
+    "rx": "^4.1.0",
     "webpack": "^1.13.0"
-  },
-  "scripts": {
-    "deploy": "webpack --bail && cp one-connect/index.html dist/one-connect.html && cp repo-connect/index.html dist/repo-connect.html && cp style.css dist/style.css && ./deploy.sh"
   }
 }

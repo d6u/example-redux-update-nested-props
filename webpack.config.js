@@ -7,6 +7,8 @@ const config = {
   entry: {
     'one-connect': join(__dirname, './one-connect/index.js'),
     'repo-connect': join(__dirname, './repo-connect/index.js'),
+    'repo-connect-memorize': join(__dirname, './repo-connect-memorize/index.js'),
+    'reducer-side-effect': join(__dirname, './reducer-side-effect/index.js'),
   },
 
   output: {
