@@ -9,6 +9,7 @@ const config = {
     'repo-connect': join(__dirname, './repo-connect/index.js'),
     'repo-connect-memorize': join(__dirname, './repo-connect-memorize/index.js'),
     'reducer-side-effect': join(__dirname, './reducer-side-effect/index.js'),
+    'react-virtualized': join(__dirname, './react-virtualized/index.js'),
   },
 
   output: {
@@ -21,6 +22,10 @@ const config = {
         exclude: /node_modules/,
         test: /\.js$/,
         loader: 'babel?presets[]=es2015&presets[]=react',
+      },
+      {
+        test: /\.css$/,
+        loader: 'style!css',
       },
     ]
   },
