@@ -7,3 +7,7 @@ http://d6u.github.io/example-redux-update-nested-props/repo-connect-memorize.htm
 http://d6u.github.io/example-redux-update-nested-props/reducer-side-effect.html
 
 http://d6u.github.io/example-redux-update-nested-props/react-virtualized.html
+
+http://d6u.github.io/example-redux-update-nested-props/snabbdom.html
+
+http://d6u.github.io/example-redux-update-nested-props/snabbdom-thunk.html
