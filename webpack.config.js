@@ -10,11 +10,15 @@ const config = {
     'repo-connect-memorize': join(__dirname, './repo-connect-memorize/index.js'),
     'reducer-side-effect': join(__dirname, './reducer-side-effect/index.js'),
     'react-virtualized': join(__dirname, './react-virtualized/index.js'),
+    'snabbdom': join(__dirname, './snabbdom/index.js'),
+    'snabbdom-thunk': join(__dirname, './snabbdom-thunk/index.js'),
   },
 
   output: {
     filename: join(__dirname, './dist/[name].js'),
   },
+
+  devtool: 'source-map',
 
   module: {
     loaders: [

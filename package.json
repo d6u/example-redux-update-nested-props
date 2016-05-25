@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --bail && cp one-connect/index.html dist/one-connect.html && cp repo-connect/index.html dist/repo-connect.html && cp repo-connect-memorize/index.html dist/repo-connect-memorize.html && cp reducer-side-effect/index.html dist/reducer-side-effect.html && cp react-virtualized/index.html dist/react-virtualized.html && cp style.css dist/style.css",
+    "build": "webpack --bail && cp one-connect/index.html dist/one-connect.html && cp repo-connect/index.html dist/repo-connect.html && cp repo-connect-memorize/index.html dist/repo-connect-memorize.html && cp reducer-side-effect/index.html dist/reducer-side-effect.html && cp react-virtualized/index.html dist/react-virtualized.html && cp snabbdom/index.html dist/snabbdom.html && cp snabbdom-thunk/index.html dist/snabbdom-thunk.html && cp style.css dist/style.css",
     "deploy": "npm run build && ./deploy.sh"
   },
   "keywords": [],
@@ -26,6 +26,7 @@
     "react-virtualized": "^7.0.5",
     "redux": "^3.5.2",
     "rx": "^4.1.0",
+    "snabbdom": "^0.5.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.0"
   }
