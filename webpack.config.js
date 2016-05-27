@@ -5,17 +5,17 @@ const webpack = require('webpack');
 
 const config = {
   entry: {
-    'one-connect': join(__dirname, './one-connect/index.js'),
-    'repo-connect': join(__dirname, './repo-connect/index.js'),
-    'repo-connect-memorize': join(__dirname, './repo-connect-memorize/index.js'),
-    'reducer-side-effect': join(__dirname, './reducer-side-effect/index.js'),
-    'react-virtualized': join(__dirname, './react-virtualized/index.js'),
-    'snabbdom': join(__dirname, './snabbdom/index.js'),
-    'snabbdom-thunk': join(__dirname, './snabbdom-thunk/index.js'),
+    'one-connect': join(__dirname, './src/one-connect/index.js'),
+    'repo-connect': join(__dirname, './src/repo-connect/index.js'),
+    'repo-connect-memorize': join(__dirname, './src/repo-connect-memorize/index.js'),
+    'reducer-side-effect': join(__dirname, './src/reducer-side-effect/index.js'),
+    'react-virtualized': join(__dirname, './src/react-virtualized/index.js'),
+    'snabbdom': join(__dirname, './src/snabbdom/index.js'),
+    'snabbdom-thunk': join(__dirname, './src/snabbdom-thunk/index.js'),
   },
 
   output: {
-    filename: join(__dirname, './dist/[name].js'),
+    filename: join(__dirname, './dist/[name]/index.js'),
   },
 
   devtool: 'source-map',
@@ -34,21 +34,32 @@ const config = {
     ]
   },
 
-  plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        pure_getters: true,
-        unsafe: true,
-        unsafe_comps: true,
-        screw_ie8: true,
-        warnings: false
-      }
-    }),
-  ]
+  plugins: (() => {
+    const defaults = [
+      new webpack.optimize.OccurenceOrderPlugin(),
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify('production'),
+      }),
+    ];
+
+    if (process.env.NODE_ENV === 'production') {
+      const prod = [
+        new webpack.optimize.UglifyJsPlugin({
+          compressor: {
+            pure_getters: true,
+            unsafe: true,
+            unsafe_comps: true,
+            screw_ie8: true,
+            warnings: false
+          }
+        })
+      ];
+
+      return defaults.concat(prod);
+    } else {
+      return defaults;
+    }
+  })()
 };
 
 module.exports = config;
