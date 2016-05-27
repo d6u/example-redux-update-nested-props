@@ -1,13 +1,7 @@
-http://d6u.github.io/example-redux-update-nested-props/one-connect.html
-
-http://d6u.github.io/example-redux-update-nested-props/repo-connect.html
-
-http://d6u.github.io/example-redux-update-nested-props/repo-connect-memorize.html
-
-http://d6u.github.io/example-redux-update-nested-props/reducer-side-effect.html
-
-http://d6u.github.io/example-redux-update-nested-props/react-virtualized.html
-
-http://d6u.github.io/example-redux-update-nested-props/snabbdom.html
-
-http://d6u.github.io/example-redux-update-nested-props/snabbdom-thunk.html
+- http://d6u.github.io/example-redux-update-nested-props/one-connect
+- http://d6u.github.io/example-redux-update-nested-props/repo-connect
+- http://d6u.github.io/example-redux-update-nested-props/repo-connect-memorize
+- http://d6u.github.io/example-redux-update-nested-props/reducer-side-effect
+- http://d6u.github.io/example-redux-update-nested-props/react-virtualized
+- http://d6u.github.io/example-redux-update-nested-props/snabbdom
+- http://d6u.github.io/example-redux-update-nested-props/snabbdom-thunk
